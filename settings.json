@@ -1,0 +1,9 @@
+{
+    "twitch": {
+        "username": "",
+        "password": ""
+    },
+    "discord": {
+        "token": ""
+    }
+}
