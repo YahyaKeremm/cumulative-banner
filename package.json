@@ -1,0 +1,15 @@
+{
+  "name": "cumulative_banner_bot",
+  "version": "1.0.0",
+  "description": "Ban a user from multiple channels at once",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yahya#1337",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.4.1",
+    "tmi.js": "^1.5.0"
+  }
+}

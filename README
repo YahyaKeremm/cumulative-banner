@@ -1,0 +1,13 @@
+settings.json dosyasında
+twitch->username kısmına twitch botunun kullanıcı adı,
+twitch->password kısmına twitch botunun oauth tokenini girin. ('oauth:' kısmı dahil)
+discord->token kısmına discord botunun tokenini girin.
+
+ana kodda (main.js)
+5. satır ve 6. satır düzenlenecek (yorumları okumayı unutmayın)
+
+düzenlemelerden sonra projenin bulunduğu klasörde bir terminal açıp "npm i" yazarak gerekli kütüphaneleri indirebilirsiniz.
+
+bütün ayarları yaptıktan sonra ve kütüphaneleri indirdikten sonra
+"node main.js"
+yazarak botu çalıştırabilirsiniz.
