@@ -76,13 +76,24 @@ dClient.on('message', (msg) => {
 
 /* START DEBUG PURPOSES */
 tClient.on('connected', (addr, port) => {
-    console.log(`running on ${addr}:${port}`);
+    console.log(`Connected to ${addr}:${port}`);
 });
 
 dClient.on('ready', () => {
     console.log(`Logged in as ${dClient.user}`);
 })
 /* END DEBUG PURPOSES */
+
+/* START OF RECONNECT */
+tClient.on('disconnected', (reason) => {
+    console.log(`I got disconnected due to {${reason}}`);
+    Reconnect();
+});
+function Reconnect () {
+    console.log(`Reconnecting...`);
+    tClient.connect();
+}
+/* END OF RECONNECT */
 
 tClient.connect();
 dClient.login(settings.discord.token);
