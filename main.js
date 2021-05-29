@@ -13,7 +13,7 @@ const dClient = new discord.Client();
 const tClient = tmi.client({identity: {
     username: settings.twitch.username,
     password: settings.twitch.password
-}, channels: channelList});
+}, channels: channelList, connection: {reconnect: true}});
 
 dClient.on('message', (msg) => {
     let content = msg.content;
@@ -87,11 +87,18 @@ dClient.on('ready', () => {
 /* START OF RECONNECT */
 tClient.on('disconnected', (reason) => {
     console.log(`I got disconnected due to {${reason}}`);
-    Reconnect();
+    tClient.connect().catch((reason) => {
+        console.log(`Couldn't reconnect due to {${reason}}`);
+    })
 });
 function Reconnect () {
+    tClient.disconnect().catch((reason) => {
+        console.log(`Couldn't disconnect due to {${reason}}`);
+    });
     console.log(`Reconnecting...`);
-    tClient.connect();
+    tClient.connect().catch((reason) => {
+        console.log(`Couldn't reconnect due to {${reason}}`);
+    });
 }
 /* END OF RECONNECT */
 
