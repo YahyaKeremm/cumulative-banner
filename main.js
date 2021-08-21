@@ -2,9 +2,11 @@ const discord = require('discord.js');
 const tmi = require('tmi.js');
 const settings = require('./settings.json');
 
-const banChanId = 0; //komutların çalıştırılacağı discord kanalının idsi (0dan kendi kanalınıza göre değiştirin)
+const banChanId = 0;    //komutların çalıştırılacağı discord kanalının idsi (0dan kendi kanalınıza göre değiştirin)
+                        //the discord channel id in which the bot will execute the commands only from that channel 
 const channelList = [
     //botun belirtilen kişiyi banlayacağı kanalların listesi:
+    //list of the channels to ban the specified person on
     //e.g "yahyakeremm", "siryakup", "karinca", "pesimistyle", "pizzavenk"
 
 ];
