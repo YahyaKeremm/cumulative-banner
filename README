@@ -6,7 +6,7 @@ twitch->password kısmına twitch botunun oauth tokenini girin. ('oauth:' kısm�
 discord->token kısmına discord botunun tokenini girin.
 
 ana kodda (main.js)
-5. satır ve 6. satır düzenlenecek (yorumları okumayı unutmayın)
+5. satır ve 7. satır düzenlenecek (yorumları okumayı unutmayın)
 
 düzenlemelerden sonra projenin bulunduğu klasörde bir terminal açıp "npm i" yazarak gerekli modülleri indirebilirsiniz.
 
@@ -22,7 +22,7 @@ put the oauth token of your twitch bot in twitch->password. (including following
 put the token of your discord bot in discord->token
 
 at the main code (main.js)
-the 5th and 6th lines shall be edited (don't forget to read the comments)
+the 5th and 7th lines shall be edited (don't forget to read the comments)
 
 after the editing, you can open up a terminal at the directory of the project and type "npm i" to automatically install the required modules.
 
